@@ -12,6 +12,8 @@ public class Book {
         this.id = id;
         this.isbn = isbn;
         this.title = title;
+        this.isCheckedOut = false;
+        this.checkedOutTo = "";
     }
 
 //Getters and Setters
@@ -37,10 +39,12 @@ public class Book {
 
 //Methods
     public void checkOut(String name) {
-
+        this.checkedOutTo = name;
+        this.isCheckedOut = true;
     }
 
     public void checkIn() {
-
+        this.checkedOutTo = "";
+        this.isCheckedOut = false;
     }
 }
