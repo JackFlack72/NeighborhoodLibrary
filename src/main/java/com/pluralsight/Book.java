@@ -1,17 +1,14 @@
 package com.pluralsight;
 
 public class Book {
-    private int id;
+
+    private  int id;
     private String isbn;
     private String title;
     private boolean isCheckedOut;
     private String checkedOutTo;
 
-    public Book() {
 
-    }
-
-//Constructor
     public Book(int id, String isbn, String title) {
         this.id = id;
         this.isbn = isbn;
@@ -20,7 +17,6 @@ public class Book {
         this.checkedOutTo = "";
     }
 
-//Getters and Setters
     public int getId() {
         return id;
     }
@@ -41,7 +37,6 @@ public class Book {
         return checkedOutTo;
     }
 
-//Methods
     public void checkOut(String name) {
         this.checkedOutTo = name;
         this.isCheckedOut = true;
@@ -51,4 +46,22 @@ public class Book {
         this.checkedOutTo = "";
         this.isCheckedOut = false;
     }
+
+    public void display() {
+        System.out.println("+------------------------------------------+");
+        System.out.println("| ID: " + id);
+        System.out.println("| Title: " + title);
+        System.out.println("| ISBN: " + isbn);
+        System.out.println("| Checked Out: " + (isCheckedOut ? "Yes" : "No"));
+        if (isCheckedOut) {
+            System.out.println("| Checked Out To: " + checkedOutTo);
+        }
+        System.out.println("+------------------------------------------+");
+    }
+
+
+
+
+
+
 }
