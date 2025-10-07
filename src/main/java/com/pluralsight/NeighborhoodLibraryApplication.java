@@ -3,6 +3,18 @@ package com.pluralsight;
 public class NeighborhoodLibraryApplication {
 
     public static void main(String[] args) {
+        Book[] books = getBooks();
+
+        for (Book book: books) {
+        //    book.display();
+            System.out.println(book.toString());
+        }
+
+
+
+    }
+
+    private static Book[] getBooks() {
         Book[] books = new Book[20];
 
         Book book1 = new Book(1, "978-0-7475-3269-9", "Harry Potter and the Sorcerer's Stone");
@@ -64,13 +76,6 @@ public class NeighborhoodLibraryApplication {
 
         Book book20 = new Book(20, "978-0-452-28425-8", "Animal Farm");
         books[19] = book20;
-
-        for (Book book: books) {
-        //    book.display();
-            System.out.println(book.toString());
-        }
-
-
-
+        return books;
     }
 }
