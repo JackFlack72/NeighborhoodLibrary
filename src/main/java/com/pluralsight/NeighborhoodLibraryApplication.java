@@ -66,7 +66,8 @@ public class NeighborhoodLibraryApplication {
         books[19] = book20;
 
         for (Book book: books) {
-            book.display();
+        //    book.display();
+            System.out.println(book.toString());
         }
 
 
